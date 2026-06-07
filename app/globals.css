@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0e17;
+  --foreground: #e8edf5;
+  --card: #111623;
+  --card-foreground: #e8edf5;
+  --border: #1e2536;
+  --muted: #161c2b;
+  --muted-foreground: #8b97ad;
+  --accent: #3b82f6;
+  --accent-foreground: #ffffff;
+  --accent-hover: #2563eb;
+  --radius: 0.75rem;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Inter", sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* subtle radial glow used behind hero */
+.glow-bg {
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
